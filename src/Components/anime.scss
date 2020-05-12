@@ -1,0 +1,209 @@
+.searchBar {
+	background-color: #faf4e8;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	box-shadow: 5px 10px 10px black;
+}
+.inputTab {
+	height: 5vh;
+	font-size: 2vw;
+	color: #212b35;
+	width: 50vw;
+	outline: none;
+	box-shadow: 10px 10px 10px black;
+}
+.formForm {
+	box-shadow: 5px 5px 5px black;
+}
+.websiteLogo {
+	font-size: 5vw;
+	text-shadow: 2px 2px 2px black;
+	color: #212b35;
+	cursor: pointer;
+}
+.animeBlock {
+	height: 50vh;
+	width: 16.5vw;
+	border-radius: 15px;
+	font-size: 1.2vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	border-radius: 15px;
+	background-color: #2a353c;
+	height: 80%;
+	cursor: pointer;
+	width: 80%;
+	box-shadow: 10px 10px 20px black;
+	transition-duration: 400ms;
+	&:hover {
+		height: 95%;
+		width: 95%;
+		box-shadow: 0px 0px 20px black;
+	}
+}
+.animePoster {
+	height: 85%;
+	background-position: center;
+	background-size: cover;
+}
+.animeTitle {
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+}
+.Lit {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	justify-items: center;
+}
+.heading {
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
+	color: white;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+	cursor: default;
+}
+
+.animeCoverPhoto {
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	height: 40vh;
+	background-color: #ed3a53;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.575);
+}
+.fullAnimeInfooo {
+	height: 60vh;
+	display: flex;
+	justify-content: space-between;
+}
+.faiPoster {
+	width: 25%;
+	display: flex;
+	//align-items: center;
+	justify-content: center;
+}
+.faiPostercontainer {
+	transform: translateY(-30%);
+	box-shadow: 5px 10px 10px black;
+	background-color: white;
+	height: 26vw;
+	width: 18vw;
+	background-size: cover;
+	background-position: center;
+}
+.faiSummary {
+	width: 45%;
+	height: 85%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-size: 1.1vw;
+}
+
+.fsTitle {
+	font-size: 3vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 5px 5px 10px black;
+	cursor: pointer;
+	text-align: center;
+}
+.fsagerating {
+	color: red;
+	font-weight: 100;
+	font-size: 1vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fsRating {
+	color: #53bc9d;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2vw;
+}
+.fsSummary {
+	text-align: center;
+}
+.faiAbout {
+	width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.faiAboutContainer {
+	height: 90%;
+	width: 95%;
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: -5px 10px 10px black;
+}
+.fac {
+	font-size: 1.3vw;
+}
+.facs {
+	font-size: 2vw;
+	font-weight: bolder;
+}
+.backButton {
+	height: 5vw;
+	width: 5vw;
+	background-color: white;
+	display: flex;
+	border-radius: 50%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition-duration: 500ms;
+	&:hover {
+		background-color: black;
+		div {
+			border-color: white;
+		}
+	}
+}
+.bbt {
+	transition-duration: 500ms;
+	height: 40%;
+	//background-color: red;
+	width: 40%;
+	border-color: black;
+	border-width: 0.3vw 0 0 0.3vw;
+	border-style: solid;
+	transform: translateX(20%) rotate(-45deg);
+}
+
+@media screen and (max-width: 1000px) {
+	.Lit {
+		display: grid;
+
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+	}
+	.animeBlock {
+		height: 50vh;
+		width: 33vw;
+	}
+}
