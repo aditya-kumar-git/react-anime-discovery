@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { fullAni } from "../Redux/Action"
 import { Link } from "react-router-dom"
 import def from "../Images/wall.jpg"
+import gsap from "gsap"
 
 class FullInfo extends React.Component {
   componentDidMount() {
@@ -12,6 +13,14 @@ class FullInfo extends React.Component {
       }
       return 0
     })
+
+    var tl = gsap.timeline()
+
+    tl.from(`.fullImg`, { duration: 1, opacity: 0 })
+    tl.from(`.fullTitle`, { duration: 0.5, opacity: 0, y: "100%" })
+    tl.from(`.divider`, { duration: 0.5, opacity: 0, x: "-100%" })
+    tl.from(`.fullSummary`, { duration: 0.5, opacity: 0 })
+    tl.from(`.rat`, { duration: 0.5, opacity: 0, x: "-100%", stagger: 0.1 })
   }
 
   render() {
@@ -19,12 +28,12 @@ class FullInfo extends React.Component {
       var { FullAnime } = this.props
       if (FullAnime.attributes.subtype === "TV") {
         return (
-          <div className="fullEpisode">
+          <div className="fullEpisode rat">
             Episodes: {FullAnime.attributes.episodeCount}
           </div>
         )
       } else {
-        return <div className="fullEpisode">Movie</div>
+        return <div className="fullEpisode rat">Movie</div>
       }
     }
 
@@ -34,7 +43,7 @@ class FullInfo extends React.Component {
         return (
           <div>
             <div
-              className="fullImg"
+              className="fullImg "
               style={{
                 backgroundImage:
                   FullAnime.attributes.coverImage !== null
@@ -66,10 +75,10 @@ class FullInfo extends React.Component {
             <div className="divider"></div>
             <div className="fullSummary">{FullAnime.attributes.synopsis}</div>
             <div className="fullNum">
-              <div className="fullRating">
+              <div className="fullRating rat ">
                 Reviews: {FullAnime.attributes.averageRating}
               </div>
-              <div className="fullAge">
+              <div className="fullAge rat">
                 Rating: {FullAnime.attributes.ageRatingGuide}
               </div>
 

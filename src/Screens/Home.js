@@ -5,6 +5,7 @@ import "../Style/style.css"
 import TitanPoster from "../Components/TitanPoster"
 import Block from "../Components/Block"
 import SearchBar from "../Components/SearchBar"
+import gsap from "gsap"
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,6 +13,14 @@ class Home extends React.Component {
     if (this.props.initialAnime.length === 0) {
       this.props.getAnime()
     }
+  }
+
+  componentDidMount() {
+    var tl = gsap.timeline()
+
+    tl.from(`.Home`, { opacity: 0, duration: 1 })
+    tl.from(`.HomeTitle`, { y: "100%", opacity: 0, duration: 0.6 })
+    tl.from(`.Search`, { y: "100%", opacity: 0, duration: 0.6 })
   }
 
   renderOrNot = () => {
@@ -27,6 +36,7 @@ class Home extends React.Component {
               marginLeft: "1rem",
               fontWeight: "600",
             }}
+            className="recAn"
           >
             Recommended Anime
           </div>
