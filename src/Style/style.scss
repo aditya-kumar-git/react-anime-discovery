@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+
+.Home {
+  height: 80vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  background-attachment: fixed;
+  background-image: url("../Images/wall.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.divider {
+  height: 4px;
+  width: 50px;
+  background-color: red;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 0.3rem;
+}
+.HomeTitle {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+// !BLOCKS
+.animeBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.block {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blockImage {
+  background-size: cover;
+  background-position: center;
+  width: 18vw;
+  height: 30vw;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    .blockImageCon {
+      opacity: 1;
+    }
+  }
+}
+.blockImageCon {
+  opacity: 0;
+  font-weight: 100;
+  font-size: 1rem;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  transition-duration: 500ms;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.blockTitle {
+  width: 18vw;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.year {
+  margin-top: 0.6rem;
+  font-weight: 100;
+  font-size: 1rem;
+  width: 18vw;
+  opacity: 0.8;
+}
+
+//!FULL PAGE
+.fullLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 6vw;
+}
+.fullImg {
+  width: 100vw;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+}
+.backButton {
+  height: 3rem;
+  width: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  fill: white;
+}
+
+.fullTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.fullSummary {
+  margin-left: 1rem;
+  margin-right: 15rem;
+  line-height: 1.5rem;
+}
+.fullNum {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  display: flex;
+}
+.fullRating {
+  font-size: 1rem;
+  color: lightgreen;
+}
+
+.fullAge {
+  font-size: 1rem;
+  color: rgb(247, 51, 51);
+  margin-left: 3rem;
+}
+
+.fullEpisode {
+  font-size: 1rem;
+  margin-left: 3rem;
+  color: rgb(122, 178, 230);
+}
+
+//! SearchBAR
+
+.Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  transform: translateX(1rem);
+}
+.searchBar {
+  width: 70vw;
+  height: 5vh;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 25px;
+}
+.searchButton {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 2rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .HomeTitle {
+    font-size: 8vw;
+  }
+  .searchButton {
+    height: 1rem;
+    width: 1rem;
+  }
+  .animeBox {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .blockImage {
+    width: 30vw;
+    height: 55vw;
+  }
+  .blockTitle {
+    width: 30vw;
+  }
+  .year {
+    width: 30vw;
+  }
+
+  // !FULLPAGE
+
+  .fullImg {
+    height: 20vh;
+  }
+  .backButton {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .fullTitle {
+    font-size: 5vw;
+  }
+  .fullSummary {
+    margin-right: 5rem;
+    line-height: 1rem;
+    font-size: 2vw;
+  }
+
+  .fullRating,
+  .fullAge,
+  .fullEpisode {
+    font-size: 2.3vw;
+  }
+}
